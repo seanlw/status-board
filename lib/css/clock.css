@@ -1,0 +1,32 @@
+#panel-clock-face {
+	background: url('../img/panel-clock-face.png') 50% 50% no-repeat;
+	width: 246px;
+	height: 246px;
+	-webkit-background-size: 216px 216px;
+	-moz-background-size: 216px 216px;
+	-o-background-size: 216px 216px;
+	background-size: 216px 216px;
+}
+#clock div {
+	display: block;
+	position: absolute;
+}
+#panel-clock-hand-hours {
+	background-image: url('../img/panel-clock-hand-hours.png');
+}
+#panel-clock-hand-minutes {
+	background-image: url('../img/panel-clock-hand-minutes.png');
+}
+#panel-clock-hand-seconds {
+	background-image: url('../img/panel-clock-hand-seconds.png');
+}
+#panel-clock-hand-hours, #panel-clock-hand-minutes, #panel-clock-hand-seconds {
+	width: 246px;
+	height: 246px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 246px 246px;
+	-moz-background-size: 246px 246px;
+	-o-background-size: 246px 246px;
+	background-size: 246px 246px;
+}

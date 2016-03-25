@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Status Board</title>
+
+		<link rel="stylesheet" type="text/css" href="lib/css/main.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/clock.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/weather.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/calendar.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/pingdom.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/countdown.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/boardgamedaily.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/rss.css">
+
+		<script type="text/javascript" src="config.js"></script>
+		<script type="text/javascript" src="lib/js/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="lib/js/d3.min.js"></script>
+		<script>if (typeof module === "object") { window.d3 = module.exports; }</script>
+
+		<script type="text/javascript" src="lib/js/clock.js"></script>
+		<script type="text/javascript" src="lib/js/weather.js"></script>
+		<script type="text/javascript" src="lib/js/calendar.js"></script>
+		<script type="text/javascript" src="lib/js/pingdom.js"></script>
+		<script type="text/javascript" src="lib/js/countdown.js"></script>
+		<script type="text/javascript" src="lib/js/boardgamedaily.js"></script>
+		<script type="text/javascript" src="lib/js/rss.js"></script>
+
+	</head>
+	<body>
+		<div id="container">
+			
+			<div id="row-1">
+				<div class="panel x1-3" id="clock">
+					<div id="panel-clock-face"></div>
+					<div id="panel-clock-hand-hours"></div>
+					<div id="panel-clock-hand-minutes"></div>
+					<div id="panel-clock-hand-seconds"></div>
+				</div>
+				<div class="panel x1-3" id="weather">
+					<h2 id="panel-weather-city"></h2>
+					<h1>
+						<span id="panel-weather-temp"></span>
+						<span class="degree-sign" id="panel-weather-degree">&deg;</span>
+					</h1>
+					<div class="panel-weather-day" id="panel-weather-day-1">
+						<h3 class="panel-weather-weekday" id="panel-weather-weekday-1"></h3>
+						<h3 class="panel-weather-high" id="panel-weather-high-1"></h3>
+						<h3 class="panel-weather-low" id="panel-weather-low-1"></h3>
+					</div>
+					<div class="panel-weather-day" id="panel-weather-day-2">
+						<h3 class="panel-weather-weekday" id="panel-weather-weekday-2"></h3>
+						<h3 class="panel-weather-high" id="panel-weather-high-2"></h3>
+						<h3 class="panel-weather-low" id="panel-weather-low-2"></h3>
+					</div>
+					<div class="panel-weather-day" id="panel-weather-day-3">
+						<h3 class="panel-weather-weekday" id="panel-weather-weekday-3"></h3>
+						<h3 class="panel-weather-high" id="panel-weather-high-3"></h3>
+						<h3 class="panel-weather-low" id="panel-weather-low-3"></h3>
+					</div>
+					<div class="panel-weather-day" id="panel-weather-day-4">
+						<h3 class="panel-weather-weekday" id="panel-weather-weekday-4"></h3>
+						<h3 class="panel-weather-high" id="panel-weather-high-4"></h3>
+						<h3 class="panel-weather-low" id="panel-weather-low-4"></h3>
+					</div>
+				</div>
+				<div class="panel x1-3" id="calendar">
+					<div id="panel-calendar-day"></div>
+					<div id="panel-calendar-date"></div>
+				</div>
+			</div>
+
+			<div id="row-2">
+				<div class="panel x1-2" id="pingdom">
+					<h2 class="panel-header">Server Status</h2>
+					<div class="pingdom-server" id="pingdom-init">
+						<img src="lib/img/server-up.png" alt="" />
+						<div class="pingdom-server-name">
+							<h2></h2>
+							<h3></h3>
+						</div>
+					</div>
+				</div>
+				<div class="panel x1-2" id="rss">
+					<div class="rss-item" id="rss-init" data-guid="">
+						<div class="rss-item-meta">
+							<h2></h2>
+							<h3></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="row-3">
+				<div class="panel x1-3">
+					<div class="panel-boardgame-plays">
+        		<h1>boardgame plays</h1>
+    			</div>
+				</div>
+				<div class="panel x1-3">
+			    <div class="panel-countdown-single" data-timestamp="">
+			        <h1>Countdown</h1>
+			        <h2></h2>
+			        <div class="panel-countdown-container day">
+			                <div class="panel-countdown-digit">0</div>
+			                <h3>Days</h3>
+			        </div>
+			        <div class="panel-countdown-container hour">
+			                <div class="panel-countdown-digit">0</div>
+			                <h3>Hours</h3>
+			        </div>
+			        <div class="panel-countdown-container minute">
+			                <div class="panel-countdown-digit">0</div>
+			                <h3>Minutes</h3>
+			        </div>
+			        <div class="panel-countdown-container second">
+			                <div class="panel-countdown-digit">0</div>
+			                <h3>Seconds</h3>
+			        </div>
+			        <h4>Remaining</h4>
+			    </div>
+				</div>
+				<div class="panel x1-3">
+			    <div class="panel-countdown-multiple">
+			        <h1>upcoming</h1>
+			    </div>
+				</div>
+			</div>
+
+			<div id="row-4">
+				<div class="panel x1-1 bottom">
+					<h2 class="panel-header">Boardgame Daily Plays (Last <span class="header-days">?</span> Days)</h2>
+					<div class="boardgame-yearly"></div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

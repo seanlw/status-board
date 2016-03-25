@@ -1,0 +1,64 @@
+#weather {
+	font-family: "Roadgeek 2005 Series C", sans-serif;
+}
+#weather h1 {
+	font-size: 100px;
+	line-height: 80px;
+	color: white;
+	text-align: center;
+	margin-top: 3px;
+	margin-bottom: 2px;
+}
+#weather .degree-sign {
+	font-family: Futura, Helvetica, sans-serif;
+	font-size: 66px;
+	vertical-align: 20px;
+	margin-left: -20px;
+}
+#weather h2 {
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #575757;
+	margin-top: 15px;
+}
+#panel-weather-city {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.panel-weather-day {
+	float: left;
+	clear: none;
+	width: 60px;
+	height: 90px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	-webkit-background-size: 42px 37px;
+	-moz-background-size: 42px 37px;
+	background-size: 42px 37px;
+}
+.panel-weather-weekday {
+	color: #7f7f7f;
+}
+
+.panel-weather-high, .panel-weather-low {
+	margin-top: 4px;
+}
+.panel-weather-high {
+	color: white;
+}
+.panel-weather-low {
+	margin-top: 4px;
+	margin-left: 1px;
+	color: #78b8fb;
+}
+.panel-weather-day.weather-sun { background-image: url('../img/weather-sun@2x.png'); }
+.panel-weather-day.weather-cloud { background-image: url('../img/weather-cloud@2x.png'); }
+.panel-weather-day.weather-cloud-sun { background-image: url('../img/weather-cloud-sun@2x.png'); }
+.panel-weather-day.weather-snow { background-image: url('../img/weather-snow@2x.png'); }
+.panel-weather-day.weather-rain { background-image: url('../img/weather-rain@2x.png'); }

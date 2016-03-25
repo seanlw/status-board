@@ -1,0 +1,52 @@
+#calendar {
+	font-family: "Roadgeek 2005 Series C", sans-serif;
+}
+#panel-calendar-day {
+	font-size: 24px;
+	line-height: 24px;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	margin: 30px 30px 0 30px;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid #e52106;
+	border-top-color: #E02108;
+	background-image: linear-gradient(bottom, #CB0D06 40%, #D21C0F 57%, #DD2C18 79%);
+	background-image: -o-linear-gradient(bottom, #CB0D06 40%, #D21C0F 57%, #DD2C18 79%);
+	background-image: -moz-linear-gradient(bottom, #CB0D06 40%, #D21C0F 57%, #DD2C18 79%);
+	background-image: -webkit-linear-gradient(bottom, #CB0D06 40%, #D21C0F 57%, #DD2C18 79%);
+	background-image: -ms-linear-gradient(bottom, #CB0D06 40%, #D21C0F 57%, #DD2C18 79%);
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#panel-calendar-date {
+	font-size: 130px;
+	line-height: 130px;
+	text-align: center;
+	background-color: #fff;
+	background-image: linear-gradient(top, #F2F3F3 2%, #EAEAEB 51%, #DCDCDE 76%);
+	background-image: -o-linear-gradient(top, #F2F3F3 2%, #EAEAEB 51%, #DCDCDE 76%);
+	background-image: -moz-linear-gradient(top, #F2F3F3 2%, #EAEAEB 51%, #DCDCDE 76%);
+	background-image: -webkit-linear-gradient(top, #F2F3F3 2%, #EAEAEB 51%, #DCDCDE 76%);
+	background-image: -ms-linear-gradient(top, #F2F3F3 2%, #EAEAEB 51%, #DCDCDE 76%);
+	border: 1px solid #E8E8E8;
+	border-top: none;
+	width: 184px;
+	height: 125px; 
+	margin: 0 30px;
+	padding-top: 15px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: inset 1px 4px 11px -6px;
+	-moz-box-shadow: inset 1px 4px 11px -6px;
+	-webkit-box-shadow: inset 1px 4px 11px -6px;
+}
