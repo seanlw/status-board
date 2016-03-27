@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/seanlw/status-board.svg?branch=master)](https://travis-ci.org/seanlw/status-board)
+
 # Status Board
 
 A Electron application that displays a status board to display various pieces of information, much like [Panic's Status Board](https://panic.com/statusboard/).
