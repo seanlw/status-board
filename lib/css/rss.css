@@ -1,33 +1,33 @@
 #rss {
-	font-family: "Roadgeek 2005 Series C", sans-serif;
-	overflow: hidden;
-	}
+  font-family: "Roadgeek 2005 Series C", sans-serif;
+  overflow: hidden;
+}
 .rss-item {
-	clear: both;
-	margin-left: 20px;
-	margin-right: 20px;
+  clear: both;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .rss-item img {
-	background-color: #fff;
-	float: left;
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 10px;
-	width: 16px;
-	height: 16px;
+  background-color: #fff;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  width: 16px;
+  height: 16px;
 }
 .rss-item-meta {
-	float: left;
-	margin-top: 10px;
-	
+  float: left;
+  margin-top: 10px;
+  
 }
 .rss-item-meta h2 {
-	font-size: 20px;
-	line-height: 20px;
-	color: white;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
 }
 .rss-item-meta h3 {
-	font-size: 14px;
-	line-height: 14px;
-	color: #7f7f7f;
+  font-size: 14px;
+  line-height: 14px;
+  color: #7f7f7f;
 }
