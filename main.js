@@ -13,7 +13,13 @@ app.on('window-all-closed', function(){
 });
 
 app.on('ready', function(){
-	mainWindow = new BrowserWindow({width: 768, height: 1028, resizable: false, icon: 'lib/img/app-icon.png'});
+	mainWindow = new BrowserWindow({
+    width: 768, 
+    height: 1028, 
+    resizable: false, 
+    icon: 'lib/img/app-icon.png',
+    title: 'Status Board'
+  });
 
 	mainWindow.loadURL('file://' + __dirname + '/index.html');
 

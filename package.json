@@ -6,6 +6,10 @@
 	"scripts": {
     "start": "electron main.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanlw/status-board"
+  },
 	"devDependencies": {
     "electron-prebuilt": "^0.36.0"
   }
