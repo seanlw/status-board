@@ -1,5 +1,6 @@
 {
-	"name": "Status-Board",
+	"name": "status-board",
+  "productName": "Status Board",
 	"version": "1.1.0",
 	"main": "main.js",
 	"author": "Sean Watkins",
