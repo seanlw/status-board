@@ -1,5 +1,7 @@
 # Status Board
 
+[![Code Climate](https://codeclimate.com/github/seanlw/status-board/badges/gpa.svg)](https://codeclimate.com/github/seanlw/status-board)
+
 A Electron application that displays a status board to display various pieces of information, much like [Panic's Status Board](https://panic.com/statusboard/).
 
 ## To Use

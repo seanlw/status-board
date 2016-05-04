@@ -10,12 +10,12 @@ var config = {
 		"username": "", /* Access username from Pingdom */
 		"password": "", /* Access password from Pingdom */
 		"servers": [ /* Array of hostnames to display from the Pingdom check API call */
-			"",
+			""
 		]
 	},
 	"rss": {
 		"feeds": [ /* Array of feed urls */
-			"",
+			""
 		]
 	},
 	"weather": {
