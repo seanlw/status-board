@@ -15,6 +15,7 @@ import { UpcomingModule } from './widgets/upcoming/upcoming.module';
 import { RssModule } from './widgets/rss/rss.module';
 import { BoardgamesModule } from './widgets/boardgames/boardgames.module';
 import { PingdomModule } from './widgets/pingdom/pingdom.module';
+import { TwitModule } from './widgets/twit/twit.module';
 
 import { AppComponent } from './app.component';
 
@@ -31,7 +32,8 @@ import { AppComponent } from './app.component';
     RssModule.forRoot({row: 2, column: 1}),
     PingdomModule.forRoot({row: 3, column: 1}),
     UpcomingModule.forRoot({row: 3, column: 3}),
-    BoardgamesModule.forRoot({row: 4, column: 1})
+    BoardgamesModule.forRoot({row: 4, column: 1}),
+    TwitModule.forRoot({row: 3, column: 4})
   ],
   declarations: [
     AppComponent

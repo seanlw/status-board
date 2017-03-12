@@ -40,11 +40,19 @@
     </div>
     <div class="input-group form-group">
       <label class="input-group-addon">Date</label>
-      <input class="form-control" type="text" [(ngModel)]="data.date" />
+      <input
+        class="form-control"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="data.date" />
     </div>
     <div class="input-group form-group">
       <label class="input-group-addon">Time</label>
-      <input class="form-control" type="text" [(ngModel)]="data.time" />
+      <input
+        class="form-control"
+        type="text"
+        placeholder="HH:MM:SS"
+        [(ngModel)]="data.time" />
     </div>
   </div>
   <div class="modal-footer">
