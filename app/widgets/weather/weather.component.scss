@@ -1,0 +1,61 @@
+@import '../../scss/_variables';
+
+.widget {
+  header{
+    h1 {
+      text-align: center;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .weather-temp {
+    font-size: 100px;
+    text-align: center;
+  }
+  .degree-sign {
+    font-size: 66px;
+    vertical-align: 20px;
+    margin-left: -20px;
+  }
+  .weather-day {
+    float: left;
+    clear: none;
+    width: 57px;
+    height: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 42px 37px;
+  }
+
+  .weather-weekday {
+    color: #7f7f7f;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  .weather-high, .weather-low {
+    margin-top: 4px;
+    margin: 0;
+  }
+  .weather-high {
+    margin: 0;
+  }
+  .weather-low {
+    margin: 0;
+    margin-top: 4px;
+    margin-left: 1px;
+    color: #78b8fb;
+  }
+  .weather-day.weather-sun { background-image: url('./widgets/weather/images/weather-sun@2x.png'); }
+  .weather-day.weather-cloud { background-image: url('./widgets/weather/images/weather-cloud@2x.png'); }
+  .weather-day.weather-cloud-sun { background-image: url('./widgets/weather/images/weather-cloud-sun@2x.png'); }
+  .weather-day.weather-snow { background-image: url('./widgets/weather/images/weather-snow@2x.png'); }
+  .weather-day.weather-rain { background-image: url('./widgets/weather/images/weather-rain@2x.png'); }
+}

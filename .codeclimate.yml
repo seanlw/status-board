@@ -1,8 +1,0 @@
-languages:
-  Ruby: false
-  JavaScript: true
-  PHP: false
-  Python: false
-exclude_paths:
-  - "lib/js/d3.min.js"
-  - "lib/js/jquery.min.js"

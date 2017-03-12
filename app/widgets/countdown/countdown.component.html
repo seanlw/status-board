@@ -1,0 +1,54 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(countdownConfig)">
+  <div class="widget-size-1x1">
+    <header>
+      <h1>Countdown</h1>
+    </header>
+    <div class="widget-body">
+      <div class="title">{{data.title}}</div>
+      <div class="days">
+        <div class="digit">{{days}}</div>
+        <h3>Days</h3>
+      </div>
+      <div class="hours">
+        <div class="digit">{{hours}}</div>
+        <h3>Hours</h3>
+      </div>
+      <div class="minutes">
+        <div class="digit">{{minutes}}</div>
+        <h3>Minutes</h3>
+      </div>
+      <div class="seconds">
+        <div class="digit">{{seconds}}</div>
+        <h3>Seconds</h3>
+      </div>
+      <h4>Remaining</h4>
+    </div>
+  </div>
+</article>
+<template #countdownConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> Countdown</h4>
+  </div>
+  <div class="modal-body">
+    <div class="input-group form-group">
+      <label class="input-group-addon">Title</label>
+      <input class="form-control" type="text" [(ngModel)]="data.title" />
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">Date</label>
+      <input class="form-control" type="text" [(ngModel)]="data.date" />
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">Time</label>
+      <input class="form-control" type="text" [(ngModel)]="data.time" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

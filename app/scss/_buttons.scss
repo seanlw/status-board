@@ -1,0 +1,43 @@
+.btn {
+  padding: 0 0.8em;
+  font-size: 1em;
+  line-height: 2em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.btn-primary {
+  @include button(#fff, #528bff, #181a1f);
+}
+
+.btn-secondary {
+  @include button(#9da5b4, #353b45, #181a1f);
+}
+
+.with-btn {
+  border-right: none;
+  display: table-cell;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-input-default {
+  display: table-cell;
+  border: 1px solid #181a1f;
+  background-color: #528bff;
+  background-image: linear-gradient(#5c92ff, #528bff);
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 40px;
+}
+.btn-danger {
+  border-radius: 0;
+  border: 1px solid #181a1f;
+  background-color: #d92626;
+  background-image: linear-gradient(#da2f2f, #d92626);
+}

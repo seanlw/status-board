@@ -1,0 +1,49 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(weatherConfig)">
+  <div class="widget-size-1x1">
+    <header>
+      <h1>{{weather.current.display_location.city}}, {{weather.current.display_location.state}}</h1>
+    </header>
+    <div class="widget-body">
+      <div class="weather-temp">
+        <span class="weather-temp-degrees">{{weather.current.temp_f}}</span>
+        <span *ngIf="weather.current.temp_f" class="degree-sign">&deg;</span>
+      </div>
+      <div *ngFor="let day of weather.days | slice:1:5" [ngClass]="weatherClass(day)" >
+        <h3 class="weather-weekday">{{day.date.weekday_short}}</h3>
+        <h3 class="weather-high">{{day.high.fahrenheit}}</h3>
+        <h3 class="weather-low">{{day.low.fahrenheit}}</h3>
+      </div>
+    </div>
+  </div>
+</article>
+<template #weatherConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> Weather</h4>
+  </div>
+  <div class="modal-body">
+    <div class="input-group form-group">
+      <label class="input-group-addon">API Key</label>
+      <input class="form-control" type="text" [(ngModel)]="config.apiKey" />
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">City</label>
+      <input class="form-control" type="text" [(ngModel)]="config.city" />
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">State</label>
+      <input class="form-control" type="text" [(ngModel)]="config.state" />
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">Zip</label>
+      <input class="form-control" type="text" [(ngModel)]="config.zip" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

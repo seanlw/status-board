@@ -1,0 +1,21 @@
+@import '../../scss/_variables';
+
+.widget {
+  header {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .date-month {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    color: $light-gray;
+  }
+
+  .date-day {
+    text-align: center;
+    font-size: 130px;
+  }
+}

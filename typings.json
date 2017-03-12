@@ -1,0 +1,10 @@
+{
+  "name": "status-board",
+  "dependencies": {
+    "c3": "registry:dt/c3#0.4.0+20170123145731"
+  },
+  "globalDependencies": {
+    "electron": "registry:dt/electron#1.4.8+20170227030124",
+    "node": "registry:dt/node#7.0.0+20170308233040"
+  }
+}

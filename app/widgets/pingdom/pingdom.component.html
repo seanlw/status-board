@@ -1,0 +1,59 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(pingdomConfig)">
+  <div class="widget-size-2x1">
+    <header>
+      <h1>Servers</h1>
+    </header>
+    <div class="widget-body">
+      <div *ngFor="let server of checks" class="server-row">
+        <span [ngClass]="statusClass(server)"></span>
+        <h2>{{server.name}}</h2>
+        <span [ngClass]="responsetimeClass(server)">{{server.lastresponsetime}} ms</span>
+       </div>
+    </div>
+  </div>
+</article>
+<template #pingdomConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> Pingdom</h4>
+  </div>
+  <div class="modal-body">
+    <div class="input-group form-group">
+      <label class="input-group-addon">Api Key</label>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="config.key"
+        (change)="updateServers()"/>
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">Username</label>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="config.username"
+        (change)="updateServers()"/>
+    </div>
+    <div class="input-group form-group">
+      <label class="input-group-addon">Password</label>
+      <input
+        class="form-control"
+        type="password"
+        [(ngModel)]="config.password"
+        (change)="updateServers()"/>
+    </div>
+    <div *ngFor="let serverConfig of config.servers; let i = index" class="form-group">
+      <label class="sr-only">Server</label>
+      <select #resourceList class="form-control" [ngModel]="serverConfig" (ngModelChange)="updateServerConfig(i, $event)">
+        <option *ngFor="let server of servers" value="{{ server.hostname }}">{{ server.name }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

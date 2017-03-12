@@ -1,0 +1,33 @@
+.widget {
+  .widget-body {
+    padding: 7px;
+
+    div {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  .clock-face {
+    background: url('./widgets/clock/images/clock-face.png') 50% 50% no-repeat;
+    width: 246px;
+    height: 246px;
+    background-size: 216px 216px;
+  }
+  .clock-hand-hours {
+    background-image: url('./widgets/clock/images/clock-hand-hours.png');
+  }
+  .clock-hand-minutes {
+    background-image: url('./widgets/clock/images/clock-hand-minutes.png');
+  }
+  .clock-hand-seconds {
+    background-image: url('./widgets/clock/images/clock-hand-seconds.png');
+  }
+  .clock-hand-hours, .clock-hand-minutes, .clock-hand-seconds {
+    width: 246px;
+    height: 246px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 246px 246px;
+  }
+}

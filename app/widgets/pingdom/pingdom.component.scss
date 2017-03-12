@@ -1,0 +1,68 @@
+@import '../../scss/_variables';
+
+$height: 37px;
+
+.widget {
+  .server-row {
+    height: $height;
+  }
+
+  .responsetime {
+    display: inline-block;
+    overflow: hidden;
+    width: 50px;
+    max-width: 50px;
+    margin-left: 5px;
+    line-height: $height;
+
+    &.warning {
+      color: $yellow;
+    }
+    &.critical{
+      color: $red;
+    }
+  }
+
+  .status {
+    font-family: 'FontAwesome';
+    font-size: $height;
+    line-height: $height;
+    width: 38px;
+    text-align: center;
+    color: $yellow;
+    display: inline-block;
+    overflow: hidden;
+
+    &:before {
+      content: "\f10c";
+    }
+
+    &.up:before {
+      color: $green;
+      content: "\f0d8";
+    }
+
+    &.down:before {
+      color: $red;
+      content: "\f0d7";
+    }
+
+    &.down + h2 {
+      color: $red;
+    }
+
+  }
+
+  h2 {
+    width: 370px;
+    max-width: 370px;
+    margin: 0;
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 28px;
+    line-height: $height;
+    font-weight: normal;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+}

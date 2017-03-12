@@ -1,0 +1,32 @@
+@import '../../scss/_variables';
+
+.widget {
+  #boardgames-chart {
+    fill: transparent;
+
+    path, line {
+      stroke: $silver;
+    }
+
+    .c3-line {
+      stroke-width: 3px;
+      stroke: $blue;
+    }
+
+    .c3-axis-y {
+      path.domain {
+        stroke: none;
+      }
+    }
+
+    .c3-area {
+      fill: $blue;
+      opacity: 0.2;
+    }
+
+    .tick text{
+      fill: $light-gray;
+      font-size: 13px;
+    }
+  }
+}

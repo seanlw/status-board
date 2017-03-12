@@ -1,0 +1,7 @@
+@mixin widget_size($width, $height) {
+  width: #{(260 * $width + (($width - 1) * 10))}px;
+  height: #{(260 * $height + (($height - 1) * 10))}px;
+  max-width: #{(260 * $width + (($width - 1) * 10))}px;
+  max-height: #{(260 * $height + (($height - 1) * 10))}px;
+  overflow: hidden;
+}

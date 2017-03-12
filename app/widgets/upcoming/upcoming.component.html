@@ -1,0 +1,36 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(upcomingConfig)">
+  <div class="widget-size-1x1">
+    <header>
+      <h1>Upcoming</h1>
+    </header>
+    <div class="widget-body">
+      <div *ngFor="let row of data | slice:0:4" class="row">
+          <div class="days">
+              <h3 class="day">{{row.days}}</h3>
+              <span *ngIf="row.days === 1" class="label">day</span>
+              <span *ngIf="row.days !== 1" class="label">days</span>
+          </div>
+          <div class="title">{{row.title}}</div>
+      </div>
+    </div>
+  </div>
+</article>
+<template #upcomingConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> Upcoming</h4>
+  </div>
+  <div class="modal-body">
+    <div class="input-group form-group">
+      <label class="input-group-addon">Google Spreadsheet Url</label>
+      <input class="form-control" type="text" [(ngModel)]="url" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

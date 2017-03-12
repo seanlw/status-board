@@ -1,0 +1,75 @@
+@import '../../scss/_variables';
+
+.widget {
+  h3 {
+    font-weight: normal;
+    font-size: 13px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-transform: uppercase;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: #7f7f7f;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .title {
+    height: 56px;
+    line-height: 56px;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin: 1px;
+  }
+
+  .days {
+    .digit {
+      width: 35px;
+    }
+  }
+
+  .hours,
+  .minutes,
+  .seconds {
+    .digit {
+      width: 28px;
+    }
+  }
+
+  .digit {
+    text-align: center;
+    position: relative;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    padding-top: 4px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin: 2px;
+    border-radius: 3px;
+    box-sizing: content-box;
+  }
+}

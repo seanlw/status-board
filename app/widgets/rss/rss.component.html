@@ -1,0 +1,46 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(rssConfig)">
+  <div class="widget-size-2x1">
+    <header>
+      <h1>News</h1>
+    </header>
+    <div class="widget-body">
+      <div *ngFor="let item of rss | slice:0:5" class="item-row">
+        <h2>{{item.title}}</h2>
+        <h3>{{item.feedTitle}} {{item.formatDate}}</h3>
+      </div>
+    </div>
+  </div>
+</article>
+<template #rssConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> RSS</h4>
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let feed of feeds; let i = index" class="input-group form-group input-table">
+      <label class="input-group-addon">Feed Url</label>
+      <input
+        class="form-control with-btn"
+        type="text"
+        [(ngModel)]="feed.url"/>
+      <span
+        *ngIf="i !== 0"
+        class="btn-input-default btn-danger"
+        (click)="removeFeedUrl(i)">
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </span>
+      <span
+        class="btn-input-default"
+        (click)="addFeedUrl(i)">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

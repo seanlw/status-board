@@ -1,0 +1,29 @@
+<article
+  class="widget config"
+  [style.top]="widget.top"
+  [style.left]="widget.left"
+  (click)="showConfig(boardgamesConfig)">
+  <div class="widget-size-3x1">
+    <header>
+      <h1>Board Game Plays</h1>
+    </header>
+    <div class="widget-body">
+      <div id="boardgames-chart" class="area-chart"></div>
+    </div>
+  </div>
+</article>
+<template #boardgamesConfig let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"><i class="fa fa-cogs" aria-hidden="true"></i> Board Games</h4>
+  </div>
+  <div class="modal-body">
+    <div class="input-group form-group">
+      <label class="input-group-addon">BoardGameGeek Username</label>
+      <input class="form-control" type="text" [(ngModel)]="username" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="d()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="c()">Save</button>
+  </div>
+</template>

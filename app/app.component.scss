@@ -1,0 +1,80 @@
+@import 'scss/bootstrap';
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #101214;
+  font-family: "Roadgeek 2005 Series C", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: normal;
+  color: $white;
+}
+
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 1960px;
+  height: 1080px;
+  overflow: hidden;
+  background-color: #101214;
+}
+
+.drag-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-app-region: drag;
+  z-index: 10000;
+}
+
+.widget {
+  clear: both;
+  position: absolute;
+  background-color: $gray;
+  color: $white;
+  overflow: hidden;
+
+  @for $i from 1 through 4 {
+    @for $j from 1 through 4 {
+      .widget-size-#{$i}x#{$j} {
+        @include widget_size($i, $j)
+      }
+    }
+  }
+
+  .widget-body {
+    position: relative;
+    padding: 16px;
+  }
+
+  header {
+    overflow: hidden;
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: normal;
+      padding: 11px 13px;
+      position: relative;
+    }
+  }
+
+  &.config:hover:after {
+    font-family: 'FontAwesome';
+    content: "\f013";
+    background-color: $black;
+    position: absolute;
+    bottom: -20px;
+    right: -5px;
+    padding: 20px 5px;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+}

@@ -1,23 +1,30 @@
 # Status Board
 
-[![Code Climate](https://codeclimate.com/github/seanlw/status-board/badges/gpa.svg)](https://codeclimate.com/github/seanlw/status-board)
-
 A Electron application that displays a status board to display various pieces of information, much like [Panic's Status Board](https://panic.com/statusboard/).
 
-## To Use
+### Packaging
 
-Clone and run this repository. You will need [Node.js](https://nodejs.org/en/download/) installed. From the command line:
+You can package Status Board by running the following commands based on your target system:
 
-```bash
-# Clone repository
-git clone https://github.com/seanlw/status-board
-# Go to the repository
-cd status-board
-# Copy config.sample.js to config.sample.js
-cp config.sample.js config.js
-# Edit config.js to include important configuration settings
-# Install dependencies and run the app
-npm install && npm start
-```
+* `npm run package:osx` will package for MacOS X x64
+* `npm run package:win` will package for Windows x64
+* `npm run package:linux` will package for Linux x64
+* `npm run package` will package all the above
 
-#### License [Apache 2.0](LICENSE.txt)
+All packages are stored in the `bin` directory that gets created during the build process.
+
+To learn more about distributing, please read the [Application Distribution](http://electron.atom.io/docs/tutorial/application-distribution/) documentation from Electron.
+
+### Development
+
+Status Board is built with [Angular 2](https://angular.io/) using Typescript. The main application starts in `app/app.ts`.
+
+To build the application you can run one of these commands:
+
+* `npm run build` will build the application
+* `npm run election` will build the application and start electron
+* `npm run watch` will watch the directory for changes and re-build the application
+
+## License
+
+[MIT License](LICENSE.txt)
