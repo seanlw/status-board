@@ -40,9 +40,6 @@ export class RssService {
       this.updateRss();
     });
     this.getFeeds();
-    if (!this.feeds) {
-      this.feeds = [{ url: ''}];
-    }
   }
 
   updateRss(): void {
@@ -67,6 +64,9 @@ export class RssService {
 
   getFeeds(): string[] {
     this.feeds = this.storage.get('rss');
+    if (!this.feeds) {
+      this.feeds = [{ url: ''}];
+    }
     return this.feeds;
   }
 
