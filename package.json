@@ -23,6 +23,7 @@
     "package:osx": "npm run build && babel-node scripts/package.js --platform=darwin",
     "package:win": "npm run build && babel-node scripts/package.js --platform=win32",
     "package:linux": "npm run build && babel-node scripts/package.js --platform=linux",
+    "package:rpi": "npm run build && babel-node scripts/package.js --platform=rpi",
     "postinstall": "typings install",
     "start": "npm run electron"
   },
@@ -42,7 +43,7 @@
     "core-js": "^2.4.1",
     "denodeify": "^1.2.1",
     "electron": "1.6.1",
-    "electron-packager": "^7.3.0",
+    "electron-packager": "^8.6.0",
     "es6-shim": "^0.34.0",
     "json-loader": "^0.5.4",
     "lodash": "^3.10.1",

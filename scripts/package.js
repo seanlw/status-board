@@ -52,9 +52,9 @@ function ignoreBuildFiles() {
  */
 const ELECTRON_PACKAGER_OPTS = {
   name: pkg.productName,
-  'app-version': pkg.version,
-  'app-bundle-id': pkg.appBundleId,
-  'helper-bundle-id': pkg.helperBundleId,
+  'appVersion': pkg.version,
+  'appBundleId': pkg.appBundleId,
+  'helperBundleId': pkg.helperBundleId,
   //version: pkg.devDependencies['electron-prebuilt'].replace('^', ''),
   asar: true,
   prune: true,
@@ -72,6 +72,7 @@ const TASKS = [
   { platform: 'darwin', arch: 'x64', icon: 'app-icon.icns' },
   { platform: 'linux', arch: 'x64', icon: 'app-icon.png' },
   { platform: 'win32', arch: 'x64', icon: 'app-icon.ico' },
+  { platform: 'rpi', arch: 'armv7l', icon: 'app-icon.png' }
 ].map(function(item) {
   return Object.assign(
     item,
@@ -86,20 +87,26 @@ const TASKS = [
  * Package electron app through electron-packager
  */
 async function packElectronApp(opts) {
-  return denodeify(packager).call(packager, opts).then(postPack);
+  return denodeify(packager).call(packager, opts)
+    .then((appPaths) => {
+      postPack(appPaths, opts)
+    });
 }
 
-function postPack(appPaths) {
+function postPack(appPaths, opts) {
   var appPath = appPaths.toString();
   var dir = appPath.split('/').slice(-1);
   var binDir = appPath.split('/').slice(0,-1).join('/');
   var platform = dir.toString().split('-')[1];
 
-  if( platform === 'darwin' ) {
+  if( opts.platform === 'darwin' ) {
     platform = 'macos';
   }
-  if ( platform === 'win32' ) {
+  if ( opts.platform === 'win32' ) {
     platform = 'win';
+  }
+  if ( opts.platform === 'linux' && opts.arch === 'armv7l') {
+    platform = "rpi";
   }
 
   unlinkSync(appPath + '/LICENSE');
@@ -122,6 +129,7 @@ function postPack(appPaths) {
 (async function startPack() {
   try{
     for (var task of TASKS) {
+      if (task.platform === 'rpi') { task.platform = 'linux' }
       await packElectronApp(task);
     }
   } catch (err) {

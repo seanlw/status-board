@@ -82,10 +82,11 @@ export class RssService {
         let parser = new DOMParser();
         let doc = parser.parseFromString(xmlStr, 'application/xml');
 
-        let title = doc.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+        let title = doc.getElementsByTagName('title')[0].childNodes[0].textContent;
         let items = doc.getElementsByTagName('item');
         for (let item of items) {
-          let itemTitle = item.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+          let itemTitle = item.getElementsByTagName('title')[0].childNodes[0].textContent
+            .replace(/&amp;/g, '&');
           let pubDate = '';
           try {
             pubDate = item.getElementsByTagName('pubDate')[0].childNodes[0].nodeValue;
