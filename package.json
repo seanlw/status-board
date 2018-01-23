@@ -42,7 +42,7 @@
     "c3": "^0.4.11",
     "core-js": "^2.4.1",
     "denodeify": "^1.2.1",
-    "electron": "1.6.1",
+    "electron": "1.6.16",
     "electron-packager": "^8.6.0",
     "es6-shim": "^0.34.0",
     "json-loader": "^0.5.4",
